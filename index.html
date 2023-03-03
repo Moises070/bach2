@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Validar Usuario y Clave para entrar</title>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+
+ <script>
+function comprobarClave(){
+   clave1 = document.f1.clave1.value
+   clave2 = document.f1.clave2.value
+
+
+   if (clave1 =="Moises" && clave2 =="Garcia") {
+      alert("Los Datos Coinciden...\n Bienvenido");
+       var href ="html/Principal.html";
+       window.location=href;
+         }
+    else{
+        alert("Las dos claves son distintas...\n intentelo nuevamente.");
+         var href= "index.html";
+         window.location=href;
+    };
+}
+</script>
+</head>
+
+ <body background="imagenes/fondo.jpg">
+   <div class="contenedor">
+      <div class="overlay">
+         <div class="popup">
+              <form action=""name="f1">
+               <div class="contenedor-inputs">
+              <center><h1>Iniciar sesion</h1>
+              <h1>Usuario: Moises</h1>
+              <h1>Contraseña: Garcia</h1></center>
+             <hr>
+             <input class="col-form-label"  id="floatingInput" placeholder="User" name="clave1" size="30">
+             <br><br>
+             <input type="password" class="col-form-label" placeholder="Password" name="clave2" size="30">
+             <br><br>
+           
+             <input type="buttom" value="Ingresar" onClick="comprobarClave()">
+             <br>
+             
+             <hr>
+             </form>
+          </div>
+      </div>
+</body>
+</html>
